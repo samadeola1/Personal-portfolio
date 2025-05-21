@@ -6,6 +6,7 @@ import Navbar from "./Layouts/Navbar";
 import Hero from "./features/Hero";
 import Projects from "./features/Projects";
 import About from "./features/About";
+import Connect  from "./features/Connect"
 
 
 function App() {
@@ -16,9 +17,11 @@ function App() {
         <Hero/>
         <Projects/>
         <About/>
+        <Connect/>
       </main>
     </>
   );
 }
 
 export default App;
+

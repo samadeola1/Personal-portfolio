@@ -43,7 +43,7 @@ const Projects = () => {
     <section className="px-4 py-12 md:px-20 lg:px-24 border-b border-[#C7C7C7] pb-14">
       {/* Heading */}
       <div className="text-left mb-12">
-        <h2 className="text-[46px] md:text-[76px] font-Bebas font-bold uppercase text-[#FFFFFF]">
+        <h2 className="text-[46px] md:text-[60px] font-Bebas font-bold uppercase text-[#FFFFFF]">
           FEATURED PROJECTS
         </h2>
         <p className="text-[16px]  md:text-[18px] font-Manrope text-[#C7C7C7] mt-4 break-words">

@@ -50,7 +50,7 @@ const Hero = () => {
       </section>
 
       {/* Right Section: Hero Image */}
-      <section className="mt-8 lg:mt-0 flex justify-center md:justify-start lg:justify-end">
+      <section className="mt-8 lg:mt-0 flex justify-center  lg:justify-end">
         <img
           className="w-full rounded-2xl sm:w-[300px] sm:h-[350px] md:w-[500px] md:h-[600px] object-cover"
           src={heroImg}
