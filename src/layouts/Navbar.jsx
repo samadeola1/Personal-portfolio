@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import robertLogo from "../assets/robert garcia logo.svg";
 import mobileNavLogo from "../assets/mobileNavLogo.svg";
-
+import { Link } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
 const Navbar = () => {
   const [isMobileNavVisible, setIsMobileNavVisible] = useState(false);
 
@@ -14,16 +15,32 @@ const Navbar = () => {
       <main>
         <section className="flex justify-between items-center md:px-12 md:py-6 px-2 py-4">
           {/* Logo */}
-          <div>
-            <img src={robertLogo} alt="robertLogo" />
-          </div>
+          <RouterLink to="/">
+            <div>
+              <img src={robertLogo} alt="robertLogo" />
+            </div>
+          </RouterLink>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:block">
-            <ul className="flex gap-8 leading-[150%] ">
-              <li className="text-[#C7C7C7]">Work</li>
-              <li className="text-[#C7C7C7]">About</li>
-              <li className="text-[#C7C7C7]">Contact</li>
+            <ul className="flex gap-8 leading-[150%] font-Manrope ">
+              <Link to="projects" smooth={true} duration={500}>
+                <li className="text-[#C7C7C7] cursor-pointer hover:text-[#D3E97A] transition-all">
+                  work
+                </li>
+              </Link>
+
+              <RouterLink to="about-me">
+                <li className="text-[#C7C7C7] cursor-pointer hover:text-[#D3E97A] transition-all">
+                  About
+                </li>
+              </RouterLink>
+
+              <Link to="connect" smooth={true} duration={500}>
+                <li className="text-[#C7C7C7] cursor-pointer hover:text-[#D3E97A] transition-all ">
+                  Contact
+                </li>
+              </Link>
             </ul>
           </nav>
 
@@ -39,9 +56,17 @@ const Navbar = () => {
         {isMobileNavVisible && (
           <nav className="md:hidden bg-[#0A0A0A] text-white text-center px-12 py-4">
             <ul className="flex flex-col gap-4">
-              <li>Work</li>
-              <li>About</li>
-              <li>Contact</li>
+              <Link to="projects" smooth={true} duration={500}>
+                <li className="text-[#C7C7C7]cursor-pointer hover:text-[#D3E97A] transition-all">work</li>
+              </Link>
+
+              <RouterLink to="about-me">
+                <li className="text-[#C7C7C7]cursor-pointer hover:text-[#D3E97A] transition-all">About</li>
+              </RouterLink>
+
+              <Link to="connect" smooth={true} duration={500}>
+                <li className="text-[#C7C7C7]cursor-pointer hover:text-[#D3E97A] transition-all">Contact</li>
+              </Link>
             </ul>
           </nav>
         )}

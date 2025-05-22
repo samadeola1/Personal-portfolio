@@ -40,7 +40,10 @@ const Projects = () => {
   ];
 
   return (
-    <section className="px-4 py-12 md:px-20 lg:px-24 border-b border-[#C7C7C7] pb-14">
+    <section
+      id="projects"
+      className="px-4 py-12 md:px-20 lg:px-24 border-b border-[#C7C7C7] pb-14"
+    >
       {/* Heading */}
       <div className="text-left mb-12">
         <h2 className="text-[46px] md:text-[60px] font-Bebas font-bold uppercase text-[#FFFFFF]">
@@ -95,14 +98,14 @@ const Projects = () => {
               <div className="flex gap-4 mt-4 pb-8">
                 <a
                   href={project.liveDemo}
-                  className="flex uppercase items-center gap-2 text-[#D3E97A] font-bold hover:underline"
+                  className="flex uppercase items-center gap-2 text-[#D3E97A] pointer-events-none font-bold hover:underline"
                 >
                   Live Demo
                   <img src={arrowIcon} alt="Arrow Icon" className="w-4 h-4" />
                 </a>
                 <a
                   href={project.githubLink}
-                  className="flex uppercase items-center gap-2 text-[#D3E97A] font-bold hover:underline"
+                  className="flex uppercase items-center gap-2 pointer-events-none text-[#D3E97A] font-bold hover:underline"
                 >
                   See on GitHub
                   <img src={githubLogo} alt="GitHub Logo" className="w-4 h-4" />

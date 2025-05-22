@@ -16,6 +16,7 @@ const Connect = () => {
 
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState("");
+  const [loading, setLoading] = useState(false); // Loading state
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -54,22 +55,35 @@ const Connect = () => {
         (response) => {
           console.log("SUCCESS!", response.status, response.text);
           setSuccessMessage("Your message has been sent successfully!");
+        
           setFormData({ name: "", email: "", subject: "", message: "" }); // Reset form
-        },
+          setLoading(false); // Set loading state to false
+            setTimeout(() => {
+                setSuccessMessage(""); // Clear success message after 2 seconds
+            }, 2000);
+        
+            setTimeout(() => {
+                setErrors(""); // Clear errors after 2 seconds
+            },2000
+              )        },
         (error) => {
           console.error("FAILED...", error);
           setErrors({
             form: "Failed to send your message. Please try again later.",
           });
+          setLoading(false); // Set loading state to false
         }
       );
   };
 
   return (
-    <section className="flex flex-col lg:flex-row lg:justify-between px-4 py-12 md:px-20 lg:px-24">
+    <section
+      id="connect"
+      className="flex flex-col lg:flex-row lg:justify-between px-4 py-12 md:px-20 lg:px-24"
+    >
       {/* Left Section */}
       <div className="flex flex-col gap-6 lg:w-1/2">
-        <h2 className="text-[30px] md:text-[60px] font-Bebas font-bold uppercase text-[#FFFFFF]">
+        <h2 className="text-[50px] md:text-[60px] font-Bebas font-bold uppercase text-[#FFFFFF]">
           Let's Connect
         </h2>
         <p className="text-sm md:text-base text-[#C7C7C7] font-Manrope">
@@ -79,7 +93,7 @@ const Connect = () => {
           </a>
           . <br />
           For more info, here is my{" "}
-          <a href="/resume" className="text-[#D3E97A] hover:underline">
+          <a href="/resume" className="text-[#D3E97A] pointer-events-none hover:underline">
             resume
           </a>
           .
@@ -176,9 +190,12 @@ const Connect = () => {
           </div>
           <button
             type="submit"
-            className="bg-[#D3E97A] text-[#0A0A0A] w-30 uppercase font-bold py-3 px-6 rounded-4xl hover:bg-[#c2d86a] cursor-pointer transition-all"
+            disabled={loading} // Disable button when loading
+            className={`bg-[#D3E97A] text-[#0A0A0A] w-30 font-bold cursor-pointer py-3 px-6 rounded-full transition-all ${
+              loading ? "opacity-50 cursor-not-allowed" : "hover:bg-[#c2d86a]"
+            }`}
           >
-            Submit
+            {loading ? "Submitting..." : "Submit"}
           </button>
           {successMessage && (
             <p className="text-green-500 text-sm mt-4">{successMessage}</p>
