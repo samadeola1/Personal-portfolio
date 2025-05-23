@@ -93,35 +93,38 @@ const Connect = () => {
           </a>
           . <br />
           For more info, here is my{" "}
-          <a href="/resume" className="text-[#D3E97A] pointer-events-none hover:underline">
+          <a
+            href="/resume"
+            className="text-[#D3E97A] pointer-events-none hover:underline"
+          >
             resume
           </a>
           .
         </p>
         <div className="flex gap-4 mt-4">
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/samuel-orogun-59ba87362/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img src={linkedinIcon} alt="LinkedIn" className="w-6 h-6" />
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/samadeola1"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img src={githubIcon} alt="GitHub" className="w-6 h-6" />
           </a>
           <a
-            href="https://twitter.com"
+            href="https://x.com/Ade_ola00"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img src={twitterIcon} alt="Twitter" className="w-6 h-6" />
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/sam_adeola?igsh=ODkzajBkZjZvMXRk&utm_source=qr"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -129,7 +132,7 @@ const Connect = () => {
           </a>
         </div>
         <div className="mt-12 text-sm text-[#C7C7C7] font-Manrope hidden lg:block">
-          &copy; 2025 Robert Garcia
+          &copy; 2025 Orogun Samuel
         </div>
       </div>
 
@@ -206,7 +209,7 @@ const Connect = () => {
         </form>
       </div>
       <div className="mt-12 text-sm text-[#C7C7C7] lg:hidden">
-        &copy; 2025 Robert Garcia
+        &copy; 2025 Orogun Samuel
       </div>
     </section>
   );

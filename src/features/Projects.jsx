@@ -6,14 +6,15 @@ const Projects = () => {
   const projects = [
     {
       Image:
-        "https://res.cloudinary.com/dd9nujmdt/image/upload/v1747787398/projectImg1_ty9no4.svg",
-      title: "Promotional landing page for our favorite show",
+        "https://res.cloudinary.com/dd9nujmdt/image/upload/v1748009484/qfqisz7khlp5zhq7yscj_a1t2a2.jpg",
+      title: "Interactive rating component",
       description:
-        "Teamed up with a designer to breathe life into a promotional webpage for our beloved show, Adventure Time. Delivered a fully responsive design with dynamic content capabilities, seamlessly integrating a newsletter feature to keep fans updated with the latest adventures.",
-      year: "2023",
+        "Teamed up with a designer to breathe life into a user-friendly platform that lets visitors quickly rate products, services, or content using intuitive interactive elements  making feedback fast, engaging, and easy to collect.",
+      year: "2025",
       role: "Front-End Developer",
-      liveDemo: "#",
-      githubLink: "#",
+      liveDemo: "https://samadeola1.github.io/Interactive-rating-component/",
+      githubLink:
+        "https://github.com/samadeola1/Interactive-rating-component.git",
     },
     {
       Image:
@@ -21,21 +22,21 @@ const Projects = () => {
       title: "Blog site for World News",
       description:
         "Mastered CSS Grid complexities in building an innovative news homepage, navigating intricate design decisions for a seamless user experience. Leveraged the challenge to enhance skills in  front-end development.",
-      year: "2022",
-      role: "Full-Stack Developer",
-      liveDemo: "#",
-      githubLink: "#",
+      year: "2025",
+      role: "Front-End Developer",
+      liveDemo: "https://samadeola1.github.io/News-Homepage-proj-7/",
+      githubLink: "https://github.com/samadeola1/News-Homepage-proj-7.git",
     },
     {
       Image:
-        "https://res.cloudinary.com/dd9nujmdt/image/upload/v1747787413/projectImg3_dki34b.svg",
-      title: "E-commerce product page",
+        "https://res.cloudinary.com/dd9nujmdt/image/upload/v1748010425/Screenshot_2025-05-23_at_3.24.10_PM_qds6e2.png",
+      title: "E-commerce Burger Website",
       description:
-        "Successfully crafted an engaging product page featuring a dynamic lightbox gallery and seamless cart functionality, showcasing proficiency in JavaScript development.",
-      year: "2022",
-      role: "Front-End Developer",
-      liveDemo: "#",
-      githubLink: "#",
+        "I designed and developed a responsive e-commerce website for a burger brand, focusing on user-friendly navigation and a visually appetizing interface. The site features an interactive menu with customizable burger options, a streamlined ordering process, and secure checkout. Emphasis was placed on mobile optimization and a modern aesthetic to enhance user experience and drive online sales.",
+      year: "2025",
+      role: "Fullstack Developer",
+      liveDemo: "https://eggys-place-project-flame.vercel.app/",
+      githubLink: "https://github.com/samadeola1/eggys-place-project.git",
     },
   ];
 
@@ -46,12 +47,12 @@ const Projects = () => {
     >
       {/* Heading */}
       <div className="text-left mb-12">
-        <h2 className="text-[46px] md:text-[60px] font-Bebas font-bold uppercase text-[#FFFFFF]">
+        <h2 className="text-[30px] md:text-[40px] font-Bebas font-bold uppercase text-[#FFFFFF]">
           FEATURED PROJECTS
         </h2>
         <p className="text-[16px]  md:text-[18px] font-Manrope text-[#C7C7C7] mt-4 break-words">
           Here are some of the selected projects that showcase my passion for
-          front-end development.
+          fullstack development.
         </p>
       </div>
 
@@ -98,14 +99,16 @@ const Projects = () => {
               <div className="flex gap-4 mt-4 pb-8">
                 <a
                   href={project.liveDemo}
-                  className="flex uppercase items-center gap-2 text-[#D3E97A] pointer-events-none font-bold hover:underline"
+                  className="flex uppercase items-center gap-2 text-[#D3E97A]  font-bold hover:underline"
+                  target="_blank"
                 >
                   Live Demo
                   <img src={arrowIcon} alt="Arrow Icon" className="w-4 h-4" />
                 </a>
                 <a
                   href={project.githubLink}
-                  className="flex uppercase items-center gap-2 pointer-events-none text-[#D3E97A] font-bold hover:underline"
+                  className="flex uppercase items-center gap-2 text-[#D3E97A] font-bold hover:underline"
+                  target="_blank"
                 >
                   See on GitHub
                   <img src={githubLogo} alt="GitHub Logo" className="w-4 h-4" />
